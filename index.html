@@ -1,1 +1,466 @@
-<h1>Hello World!</hi>
+<html lang="en"><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/WebUserApp.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+
+    <title>RYNLY USER</title>
+<style type="text/css"></style><link rel="icon" href="https://uatuser.rynly.com/favicon.ico"><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/10a/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/37/10a/util.js"></script></head>
+<body ng-app="rynly.userweb" class="ng-scope">
+    <div class="container-fluid ng-scope" ng-controller="RootController">
+        <span id="spinner" style="display: none;"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;"><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-0-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(0deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(0deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-1-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(36deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(36deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-2-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(72deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(72deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-3-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(108deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(108deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-4-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(144deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(144deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-5-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(180deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(180deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-6-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(216deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(216deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-7-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(252deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(252deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-8-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(288deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(288deg) translate(30px, 0px); border-radius: 3px;"></div></div><div style="position: absolute; top: -3px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-9-10;"><div style="position: absolute; width: 26px; height: 6px; background: rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 0px 4px; transform-origin: left center; transform: rotate(324deg) translate(30px, 0px); border-radius: 3px; top: 2px;"></div><div style="position: absolute; width: 26px; height: 6px; background: rgb(92, 93, 92); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(324deg) translate(30px, 0px); border-radius: 3px;"></div></div></div></span>
+
+        <div class="modal fade customer-portal-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body register-modal">
+                        <div class="modal-content-container">
+                            <h5 class="modal-title text-center" id="exampleModalLongTitle">REGISTER</h5>
+                            <p class="text-center">Lorem Ipsum is simply dummy text of the. printing and typesetting industry.</p>
+                            <form class="ng-pristine ng-valid">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="formGroupExampleInputa" placeholder="phone #">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" name="button" class="button-primary-site">NEXT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade customer-portal-modal" id="TrackingNumberInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body register-modal">
+                        <div class="modal-content-container">
+                            <h5 class="modal-title text-center" id="exampleModalLongTitle">TRACKING NUMBER</h5>
+                            <br>
+                            <p class="text-justify">  Tracking numbers are a set of numbers assigned to an individual package when it is shipped. To find your tracking number, go to ‘My Packages’ and copy the 13 digit tracking number into the tracking section under QR# or on the lower right side of your shipping label.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" name="button" data-dismiss="modal" class="button-primary-site" style="width: 460px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-controller="ForgotPasswordController" class="modal fade customer-portal-modal ng-scope" id="forgotpassword_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body register-modal">
+                        <div class="modal-content-container">
+                            <h5 class="modal-title text-center" id="exampleModalLongTitle">RESET PASSWORD</h5>
+                            <!-- ngIf: !forgotpasswordresponse.success --><p class="text-center ng-scope" ng-if="!forgotpasswordresponse.success">Please enter your registered email for resetting your password.</p><!-- end ngIf: !forgotpasswordresponse.success -->
+                            <form class="ng-pristine ng-valid">
+                                <!-- ngIf: forgotpasswordresponse.errors -->
+                                <!-- ngIf: forgotpasswordresponse.success -->
+                                <!-- ngIf: !forgotpasswordresponse.success --><div class="form-group ng-scope" ng-if="!forgotpasswordresponse.success">
+                                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="model.email" id="Email_Fgtpwd" ng-enter="forgotPassword()" placeholder="Email Address">
+                                </div><!-- end ngIf: !forgotpasswordresponse.success -->
+                            </form>
+                        </div>
+                    </div>
+                    <!-- ngIf: !forgotpasswordresponse.success --><div class="modal-footer ng-scope" ng-if="!forgotpasswordresponse.success">
+                        <button type="button" name="button" class="button-primary-site" ng-click="forgotPassword()">NEXT</button>
+                    </div><!-- end ngIf: !forgotpasswordresponse.success -->
+                </div>
+            </div>
+        </div>
+        <div class="sidenav">
+            <!-- ngIf: profile --><div class="sidenav-content-cont ng-scope" ng-if="profile">
+                <div id="sideNavigationMenu">
+                    <ul>
+                        <li><a href="/user/Home/MyPackages" target="_blank">My Packages</a>
+                        </li>
+                        <li><a href="/user/Home/Profile" target="_blank">My Profile</a></li>
+                        <li><a href="#" ng-click="logout()">Sign Out</a></li>
+                    </ul>
+                </div>
+            </div><!-- end ngIf: profile -->
+            <!-- ngIf: !profile -->
+        </div>
+        <div class="row align-items-center header-fixed">
+            <div class="col-md-6 col-sm-4 logo">
+                <a href="/user"> <img src="/images/WebUserApp/RYNLY-Hub-Login-logo.png" alt=""></a>
+            </div>
+            <div class="col-md-6 col-sm-8 nav-col">
+                <div class="d-flex flex-row flex-sm-row justify-content-end hamburger-menu-dropdown">
+                    <div class="p-2 main-nav d-flex-hidden d-flex align-items-center justify-content-center">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav">
+                                    <a class="nav-item nav-link active" target="_blank" style="white-space:nowrap" href="https://driverynly.com/">BECOME A DRIVER<span class="sr-only">(current)</span></a>
+                                    <a class="nav-item nav-link" target="_blank" href="https://shiprynly.com/contact/">HELP</a>
+<a class="nav-item nav-link" href="/user">HOME</a>                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="secondary-nav d-flex-mobile d-flex">
+                        <ul class="d-flex align-items-center justify-content-center">
+                            <li>
+                                <!-- ngIf: profile --><img ng-if="profile" src="/images/WebUserApp/customers.png" alt="" class="ng-scope"><!-- end ngIf: profile -->
+                                <!-- ngIf: !profile -->
+                                <!-- ngIf: !profile -->
+                                <!-- ngIf: profile --><span ng-if="profile" class="pl-2 ng-binding ng-scope">UAT TEST</span><!-- end ngIf: profile -->
+                            </li>
+                            <li ng-show="profile" class="hamburger"><img src="/images/WebUserApp/hamburger-menu.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bodyclass" data-select2-id="9">
+
+
+<div class="form-row ng-scope" style="background-color:white;" ng-controller="PackageController">
+    <input type="hidden" ng-init="stripeKey='pk_test_2BKJ3Jt3yO6BhDquhQbZaJhy'" ng-value="stripeKey" autocomplete="off" value="pk_test_2BKJ3Jt3yO6BhDquhQbZaJhy">
+    <script type="text/ng-template" id="modal.html">
+        <div class="container-fluid mynewModal-modal-window app-modal-window modal-window">
+            <br />
+            <h5>VALIDATION</h5>
+            <p class="address-validation-text">The addresses you entered seems incorrect</p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6" ng-hide="packageModel.fromAddress.location">
+                        <div><b>FROM</b></div>
+                        <div><b>{{packageModel.fromInfo.contactName | uppercase}}</b></div>
+                        <div>{{packageModel.fromAddress.company | uppercase}}</div>
+                        <div>{{packageModel.fromAddress.line1 | uppercase}}</div>
+                        <div>{{packageModel.fromAddress.line2 | uppercase}}</div>
+                        <div>{{packageModel.fromAddress.city | uppercase}}</div>
+                        <div>{{packageModel.fromAddress.state | uppercase}}</div>
+                        <div>{{packageModel.fromAddress.zip}}</div>
+                    </div>
+                    <div class="col-6" ng-hide="packageModel.toAddress.location">
+                        <div><b>TO</b></div>
+                        <div><b>{{packageModel.toInfo.contactName | uppercase}}</b></div>
+                        <div>{{packageModel.toAddress.company | uppercase}}</div>
+                        <div>{{packageModel.toAddress.line1 | uppercase}}</div>
+                        <div>{{packageModel.toAddress.line2 | uppercase}}</div>
+                        <div>{{packageModel.toAddress.city | uppercase}}</div>
+                        <div>{{packageModel.toAddress.state | uppercase}}</div>
+                        <div>{{packageModel.toAddress.zip}}</div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <p class="address-validation-text">We recommend the following</p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6" ng-hide="packageModel.fromAddress.location">
+                        <div><b>{{packageModel.fromInfo.contactName | uppercase}}</b></div>
+                        <div>{{packageModel.fromAddress.company | uppercase}}</div>
+                        <div>{{fromRecommendedAddress.line1 | uppercase}}</div>
+                        <div>{{fromRecommendedAddress.line2 | uppercase}}</div>
+                        <div>{{fromRecommendedAddress.city | uppercase}}</div>
+                        <div>{{fromRecommendedAddress.state | uppercase}}</div>
+                        <div>{{fromRecommendedAddress.zip}}</div>
+                    </div>
+                    <div class="col-6" ng-hide="packageModel.toAddress.location">
+                        <div><b>{{packageModel.toInfo.contactName | uppercase}}</b></div>
+                        <div>{{packageModel.toAddress.company | uppercase}}</div>
+                        <div>{{toRecommendedAddress.line1 | uppercase}}</div>
+                        <div>{{toRecommendedAddress.line2 | uppercase}}</div>
+                        <div>{{toRecommendedAddress.city | uppercase}}</div>
+                        <div>{{toRecommendedAddress.state | uppercase}}</div>
+                        <div>{{toRecommendedAddress.zip}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2" ng-hide="packageModel.fromAddress.location">
+                        <button type="button" style="border-radius: 10px !important; margin-right: 10px !important; margin-left: 0px !important;width: 130px !important; color:maroon !important;" name="button" class="button-primary-site validation-address-button" ng-click="Back()">BACK</button>
+                    </div>
+                    <div class="col-2" ng-hide="packageModel.fromAddress.location">
+                        <button type="button" style="border-radius: 10px !important; margin-right: 10px !important; margin-left: 10px !important; width: 130px !important; color:maroon !important;" name="button" class="button-primary-site validation-address-button" ng-click="useRecommendedAddress('From')">USE</button>
+                    </div>
+                    <div class="col-2" ng-hide="packageModel.fromAddress.location || packageModel.toAddress.location">
+
+                    </div>
+                    <div class="col-2" ng-hide="packageModel.toAddress.location">
+                        <button type="button" style="border-radius: 10px !important; margin-right: 10px !important; margin-left: 0px !important; width: 130px !important; color:maroon !important;" name="button" class="button-primary-site validation-address-button" ng-click="Back()">BACK</button>
+                    </div>
+                    <div class="col-2" ng-hide="packageModel.toAddress.location">
+                        <button type="button" style="border-radius: 10px !important; margin-right: 10px !important; margin-left: 10px !important; width: 130px !important; color:maroon !important;" name="button" class="button-primary-site validation-address-button" ng-click="useRecommendedAddress('To')">USE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/ng-template" id="hubModal.html">
+        <div class="container-fluid mynewModal-modal-window app-modal-window modal-window">
+            <br />
+            <p class="address-validation-text">Select drop of hub :</p>
+            <div class="container-fluid">
+                <table class="table" style="font-size:14px">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Distance</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in hublist">
+                            <td><input type="radio" name="groupName" ng-model="selectedHub.hubId" id="{{x.hub.id}}" ng-value="x.hub.id" /></td>
+                            <td>{{x.hub.name}}</td>
+                            <td>{{x.hub.address.line1}}</td>
+                            <td>{{x.distanceInMiles}} miles</td>
+                            <td>{{x.openingHours}} <span> - </span>{{x.closingHours}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <button type="button" style="border-radius: 5px !important; margin-right: 5px !important; margin-left: 0px !important;width: 80px !important; color:maroon !important;"
+                        name="button" class="validation-address-button pull-right" ng-click="selectHub()">
+                    OK
+                </button>
+            </div>
+        </div>
+    </script>
+
+
+    <div class="col">
+        <div class="ship-container" data-select2-id="8">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link not-active" data-toggle="tab" id="home" role="tab" ng-class="{'active':step == 1}">ADDRESS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link not-active" data-toggle="tab" id="shiptab" href="#shiptab" role="tab" ng-class="{'active':step == 2}">SHIP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link not-active" ng-class="{'active':step == 3}" data-toggle="tab" href="#pay" id="paytab" role="tab">PAY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link not-active" ng-class="{'active':step == 4}" data-toggle="tab" href="#confirmation" id="confirmtab" role="tab">CONFIRMATION</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link not-active active" ng-class="{'active':step == 5}" data-toggle="tab" href="#printlabel" id="labeltab" role="tab">PRINT LABEL</a>
+                </li>
+            </ul>
+            <div class="ship-container-contents" style="width: 1080px;">
+                <!-- ngIf: errors --><div ng-if="errors" class="ng-scope">
+                    <!-- ngRepeat: error in errors -->
+                </div><!-- end ngIf: errors -->
+                <div class="tab-content" data-select2-id="7">
+                    <!-- ngIf: step == 1 -->
+
+
+                    <!-- ngIf: step == 2 -->
+
+                    <!-- ngIf: step == 3 -->
+
+                    <!-- ngIf: step == 4 -->
+                    <!-- ngIf: step == 5 --><div class="tab-pane active ng-scope" id="printlabel" role="tabpanel" ng-if="step == 5" ng-class="{'active':labelEnabled}">
+                        <h5 style="padding-bottom: 10px;"><b>PRINT LABEL</b></h5>
+                        <hr style="border: solid 0.6px #808080 !important;">
+                        <div class="row align-items-center">
+                            <p class="col-md-12 text-center">Thank you. Your shipment has been created. Please print and affix to the package.</p>
+                            <div class="col-md-12 mt-5" id="packageLabel">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="/css/WebUserApp.css" rel="stylesheet">
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/js/moment.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+    <div class="print-container">
+        <table border="1" cellpadding="10" align="center" style="background:#ffffff">
+            <tbody><tr>
+                <td>
+                    <table cellpadding="10">
+                        <tbody><tr class="pull-left">
+                            <td style="width: 420px;">
+                                <img src="/images/WebUserApp/rynly-label-logo.png">
+                                +1-833-GO-RYNLY
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10" rowspan="3" class="pb-0 pt-0 border-bottom border-dark">
+                                <address class="fromaddress">
+Test <br>
+                                    Uat Test <br>
+                                    40 SE 106th Ave<br>
+                                    Portland, OR, US 97216<br>
+                                    +1 503-960-4585
+                                </address>
+                                <address class="toaddress">
+                                    <strong>
+                                        Test<br>
+                                        3380 Lancaster Dr NE<br>
+                                        Salem, OR, US 97305<br>
+                                        +1 503-960-4585
+                                    </strong>
+                                </address>
+                            </td>
+                        </tr>
+                        <tr class="border-bottom border-dark">
+                            <td class="pb-0 pt-0 border-for-ie">
+                                    <span class="Pick-Up">Pick-Up/Origin:</span> <br>
+                                <span class="sourcehubcode"><strong>PDX2</strong></span>
+                            </td>
+                        </tr>
+                        <tr class="border-bottom border-dark">
+                            <td class="border-for-ie border-dark border-left-setting pb-0 pt-0">
+
+                                <span class="destinationlabel">Date Due:</span><br>
+                                <span class="duedate">08/07/2019</span>
+</td>
+                        </tr>
+                        <tr>
+                            <td colspan="9" rowspan="2" class="border-right border-dark pb-0 ">
+                                <div class="qrcode m-auto">
+                                    <img src="https://rynlyuat.blob.core.windows.net/qrcode/351695a8-1998-4af3-91b1-525def63f806.svg" alt="Package QR Code">
+                                </div><br>
+                            </td>
+                            <td class="border-right border-bottom border-dark pb-0 pt-0">
+                                <div class="d-flex m-auto">
+                                    <img src="https://rynlyuat.blob.core.windows.net/packageshape/351695a8-1998-4af3-91b1-525def63f806.png" class="m-auto" alt="Shape Image">
+                                </div>
+
+                            </td>
+                            <td class="border-top border-dark pt-0 border-for-ie border-bottom-setting ">
+                                <span class="destinationlabel">Delivery/Destination:</span><br>
+                                <span class="destinationhubcode">PDX3</span><br>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pb-0 pt-0">
+                                <span class="tracking-delivery-note "><b>TRACKING:</b></span><br>
+                                <span class="trackingNumber">MU43289078PDX3</span><br>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+
+<script>
+    $(document).ready(function () {
+        var dueDate = $(".duedate");
+        for (var i = 0; i < dueDate.length; i++) {
+            var gmtDateTime = moment.utc(dueDate[i].innerHTML);
+            var local = gmtDateTime.local().format('MM/DD/YYYY');
+            dueDate[i].innerHTML = local;
+        }
+    });
+</script>  </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="col form-group float-right">
+                                <button type="button" style="border-radius: 10px !important;" name="button" class="button-primary-site-next" ng-click="printLabel()">PRINT</button>
+                                <button type="button" style="border-radius: 10px !important; margin-right:10px;" name="button" class="button-primary-site" ng-click="previous()">PREVIOUS</button>
+                            </div>
+                        </div>
+                    </div><!-- end ngIf: step == 5 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+        <div class="row footer-container site-padding text-white">
+            <div class="col-md-3">
+                <img src="/images/WebUserApp/RYNLY-Hub-Logo-white.png" alt="">
+            </div>
+            <div class="col-md-3">
+                <h2>STAY CONNECTED</h2>
+                <p>
+                    <span>
+                        <a target="_blank" href="https://www.instagram.com/shiprynly/">
+                            <img src="/images/WebUserApp/instagram.png">
+                        </a>
+                    </span>
+                    <span>
+                        <a target="_blank" href="https://www.facebook.com/shiprynlynow/">
+                            <img src="/images/WebUserApp/facebook.png">
+                        </a>
+                    </span>
+                    <span>
+                        <a target="_blank" href="https://twitter.com/shiprynly">
+                            <img src="/images/WebUserApp/twitter.png">
+                        </a>
+                    </span>
+
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h2>CONTACT US</h2>
+                <p>
+                    info@rynly.com<br>
+                    1-833-GO-RYNLY ( 1-833-467-9659)<br>
+
+                </p>
+            </div>
+            <p class="text-center">© 2018 RYNLY. All Rights Reserved.</p>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/js/webuser.js?v=ZIQdhHWQElHTsQ4rC01NMGsCxMq9Xq5nlSHP4qDPFYI"></script>
+    <script src="/js/moment.min.js"></script>
+
+    <script src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyBKnVMVNRg8HZ6Efkt7AGaeNdTb6dFIP5Q"></script>
+
+
+
+<iframe name="stripeXDM_default78526_provider" id="stripeXDM_default78526_provider" aria-hidden="true" src="https://js.stripe.com/v2/channel.html?stripe_xdm_e=https%3A%2F%2Fuatuser.rynly.com&amp;stripe_xdm_c=default78526&amp;stripe_xdm_p=1#__stripe_transport__" frameborder="0" style="position: absolute; top: -2000px; left: 0px;"></iframe><img src="https://uatuser.rynly.com/favicon.ico" style="display: none;"><iframe src="https://js.stripe.com/v2/m/outer.html#referrer=https%3A%2F%2Fuatuser.rynly.com%2Fuser&amp;title=RYNLY%20USER&amp;url=https%3A%2F%2Fuatuser.rynly.com%2Fuser%2FHome%2FPackageCreate&amp;muid=0551dbea-62af-4c95-acd3-a5bb1c097ad6&amp;sid=ef439012-3a7e-4fb0-baa6-0f0498d8db4d&amp;preview=false&amp;" frameborder="0" allowtransparency="true" scrolling="no" tabindex="-1" aria-hidden="true" style="width: 1px !important; height: 1px !important; position: fixed !important; visibility: hidden !important; pointer-events: none !important;"></iframe></body></html>
