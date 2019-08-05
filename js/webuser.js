@@ -203,18 +203,18 @@ angular.module("rynly.userweb").controller("ProfileUpdateController", function (
     $scope.response = {};
     $scope.registrationDone = false;
 
-    $scope.getProfile = function () {
-        $http.post('/api/user/profile').then(function (response) {
-            $scope.response = response.data;
-            if (response.data.success) {
-                $scope.model = response.data.data;
-                if ($scope.model.notifications == null)
-                    $scope.model.notifications = [];
-            }
-        });
-    }
+    // $scope.getProfile = function () {
+    //     $http.post('/api/user/profile').then(function (response) {
+    //         $scope.response = response.data;
+    //         if (response.data.success) {
+    //             $scope.model = response.data.data;
+    //             if ($scope.model.notifications == null)
+    //                 $scope.model.notifications = [];
+    //         }
+    //     });
+    // }
 
-    $scope.getProfile();
+    // $scope.getProfile();
 
     $scope.toggleNotificaitons = function toggleNotificaitons(notificaitontype) {
         var idx = $scope.model.notifications.indexOf(notificaitontype);
@@ -1287,29 +1287,29 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
     $scope.loadProfile = function () {
         try {
             $("#spinner").show();
-            $http.post('/api/user/profile').then(function (response) {
-                if (response.data.success && response.data.data) {
-                    $scope.profile = response.data.data;
-                    var profileAddress = $scope.profile.personalInformation.address;
-                    $scope.packageModel.fromAddress = {};
-                    $scope.packageModel.fromAddress.line1 = profileAddress.line1;
-                    $scope.packageModel.fromAddress.line2 = profileAddress.line2;
-                    $scope.packageModel.fromAddress.state = profileAddress.state;
-                    $scope.packageModel.fromAddress.city = profileAddress.city;
-                    $scope.packageModel.fromAddress.zip = profileAddress.zip;
-                    if (profileAddress.location && profileAddress.location.latitude) {
-                        $scope.packageModel.fromAddress.location = profileAddress.location;
-                    }
-                    $scope.packageModel.fromAddress.company = $scope.profile.businessName;
-                    $scope.packageModel.fromAddress.contactName = $scope.profile.personalInformation.firstName + " " + $scope.profile.personalInformation.lastName;
-                    $scope.packageModel.fromAddress.phone = $scope.profile.phone;
-                    $scope.packageModel.pickupNote = $scope.profile.pickupNote;
-                    $scope.setCardDetails();
-                    setPromoText();
-                }
-            });
+            // $http.post('/api/user/profile').then(function (response) {
+            //     if (response.data.success && response.data.data) {
+            //         $scope.profile = response.data.data;
+            //         var profileAddress = $scope.profile.personalInformation.address;
+            //         $scope.packageModel.fromAddress = {};
+            //         $scope.packageModel.fromAddress.line1 = profileAddress.line1;
+            //         $scope.packageModel.fromAddress.line2 = profileAddress.line2;
+            //         $scope.packageModel.fromAddress.state = profileAddress.state;
+            //         $scope.packageModel.fromAddress.city = profileAddress.city;
+            //         $scope.packageModel.fromAddress.zip = profileAddress.zip;
+            //         if (profileAddress.location && profileAddress.location.latitude) {
+            //             $scope.packageModel.fromAddress.location = profileAddress.location;
+            //         }
+            //         $scope.packageModel.fromAddress.company = $scope.profile.businessName;
+            //         $scope.packageModel.fromAddress.contactName = $scope.profile.personalInformation.firstName + " " + $scope.profile.personalInformation.lastName;
+            //         $scope.packageModel.fromAddress.phone = $scope.profile.phone;
+            //         $scope.packageModel.pickupNote = $scope.profile.pickupNote;
+            //         $scope.setCardDetails();
+            //         setPromoText();
+            //     }
+            // });
 
-            $scope.getAddressList();
+            // $scope.getAddressList();
             $("#spinner").hide();
         } catch (e) {
             $("#spinner").hide();
