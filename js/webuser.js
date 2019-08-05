@@ -1265,17 +1265,17 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
         $scope.$apply();
     }
 
-    $scope.loadSettings = function () {
-        $http.get("/api/settings").then(function (apiresponse) {
-            $scope.settings = apiresponse.data.data;
-            $scope.deliveryMethods = $scope.settings.deliveryMethods;
-            $scope.packagePrizeList = $scope.settings.packagePrizeList;
-            $scope.deliveryTimeList = $scope.settings.dropDownData.filter(function (i) {
-                return i.key === 'DeliveryTime';
-            })[0].dropDownItems;
-            $scope.packageModel.deliveryTimeId = $scope.deliveryTimeList[0].key;
-        });
-    }
+    // $scope.loadSettings = function () {
+    //     $http.get("/api/settings").then(function (apiresponse) {
+    //         $scope.settings = apiresponse.data.data;
+    //         $scope.deliveryMethods = $scope.settings.deliveryMethods;
+    //         $scope.packagePrizeList = $scope.settings.packagePrizeList;
+    //         $scope.deliveryTimeList = $scope.settings.dropDownData.filter(function (i) {
+    //             return i.key === 'DeliveryTime';
+    //         })[0].dropDownItems;
+    //         $scope.packageModel.deliveryTimeId = $scope.deliveryTimeList[0].key;
+    //     });
+    // }
 
     $scope.toggleNewCard = function () {
         if ($scope.newCard && !$scope.profile.paymentInfoAdded)
