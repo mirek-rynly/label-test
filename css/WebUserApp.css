@@ -347,7 +347,7 @@ border-left-setting {
 /*button.button-primary-site:active, button.button-primary-site:hover, button.button-primary-site:focus {
     background: #8b191b;
     color: #fff !important;
-    
+
 }*/
 
 .ship-container-contents .button-primary-site-next {
@@ -1461,15 +1461,15 @@ li.active {
 
 @font-face {
     font-family: 'kelson sans regular';
-    src: url('../font/kelson sans regular.otf') format('opentype');
+    src: url('../font/kelson_sans_regular.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'kelson sans light';
-    src: url('../font/kelson sans light.otf') format('opentype');
+    src: url('../font/kelson_sans_light.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'kelson sans bold';
-    src: url('../font/kelson sans bold.otf') format('opentype');
+    src: url('../font/kelson_sans_bold.otf') format('opentype');
 }
