@@ -1396,16 +1396,20 @@ li.active {
 @media print {
     body * {
         visibility: hidden;
-    }
-
-    .print-container * {
-        visibility: visible;
+        height: 0;
+        margin: 0;
     }
 
     .print-container {
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
+        margin: 20px;
+    }
+
+    .print-container, .print-container * {
+        visibility: visible;
+        height: auto;
     }
 }
 
