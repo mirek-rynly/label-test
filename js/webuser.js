@@ -88,38 +88,38 @@ userApp.directive('googleplace', function () {
                 types: [],
                 componentRestrictions: {}
             };
-            scope.gPlace = new google.maps.places.Autocomplete(element[0], options);
-            google.maps.event.addListener(scope.gPlace, 'place_changed', function () {
-                var place = scope.gPlace.getPlace();
-                var location = place.geometry && place.geometry.location ? {
-                    Latitude: place.geometry.location.lat(),
-                    Longitude: place.geometry.location.lng()
-                } : {};
-                // Get each component of the address from the place location
-                // and fill the corresponding field on the form.
-                for (var i = 0; i < place.address_components.length; i++) {
-                    var addressType = place.address_components[i].types[0];
-                    if (componentForm[addressType]) {
-                        var val = place.address_components[i][componentForm[addressType]];
-                        location[mapping[addressType]] = val;
-                    }
-                }
+            // scope.gPlace = new google.maps.places.Autocomplete(element[0], options);
+            // google.maps.event.addListener(scope.gPlace, 'place_changed', function () {
+            //     var place = scope.gPlace.getPlace();
+            //     var location = place.geometry && place.geometry.location ? {
+            //         Latitude: place.geometry.location.lat(),
+            //         Longitude: place.geometry.location.lng()
+            //     } : {};
+            //     // Get each component of the address from the place location
+            //     // and fill the corresponding field on the form.
+            //     for (var i = 0; i < place.address_components.length; i++) {
+            //         var addressType = place.address_components[i].types[0];
+            //         if (componentForm[addressType]) {
+            //             var val = place.address_components[i][componentForm[addressType]];
+            //             location[mapping[addressType]] = val;
+            //         }
+            //     }
 
-                location.FormattedAddress = place.formatted_address;
-                location.PlaceId = place.place_id;
+            //     location.FormattedAddress = place.formatted_address;
+            //     location.PlaceId = place.place_id;
 
-                scope.$apply(function () {
-                    scope.details = {
-                        city: location.City,
-                        line1: place.name,
-                        line2: "",
-                        state: location.State,
-                        zip: location.PostCode,
-                        location: { latitude: location.Latitude, longitude: location.Longitude }
-                    };
-                    model.$setViewValue(element.val());
-                });
-            });
+            //     scope.$apply(function () {
+            //         scope.details = {
+            //             city: location.City,
+            //             line1: place.name,
+            //             line2: "",
+            //             state: location.State,
+            //             zip: location.PostCode,
+            //             location: { latitude: location.Latitude, longitude: location.Longitude }
+            //         };
+            //         model.$setViewValue(element.val());
+            //     });
+            // });
         }
     };
 });
