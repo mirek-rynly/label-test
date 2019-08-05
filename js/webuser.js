@@ -1315,8 +1315,8 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
             $("#spinner").hide();
         }
     }
-    $scope.loadSettings();
-    $scope.loadProfile();
+    // $scope.loadSettings();
+    // $scope.loadProfile();
 
     $scope.updateProfileAddress = function () {
         $("#spinner").show();
