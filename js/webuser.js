@@ -151,19 +151,19 @@ angular.module("rynly.userweb").controller("RootController", function ($scope, $
     }
 
 
-    $scope.loadProfile = function () {
-        try {
-            $http.post('/api/user/profile').then(function (response) {
-                if (response.data.success && response.data.data) {
-                    $scope.profile = response.data.data
-                }
-            });
-        } catch (e) {
+    $scope.loadProfile = function () {};
+    //     try {
+    //         $http.post('/api/user/profile').then(function (response) {
+    //             if (response.data.success && response.data.data) {
+    //                 $scope.profile = response.data.data
+    //             }
+    //         });
+    //     } catch (e) {
 
-        }
-    }
+    //     }
+    // }
 
-    $scope.loadProfile();
+    // $scope.loadProfile();
 });
 
 // register controller
@@ -235,7 +235,7 @@ angular.module("rynly.userweb").controller("ProfileUpdateController", function (
             "positionClass": "toast-top-center"
         }
     }
-       
+
     $scope.updateAddress = function () {
         $("#spinner").show();
 
@@ -254,7 +254,7 @@ angular.module("rynly.userweb").controller("ProfileUpdateController", function (
 
     $scope.updatePickupNotes = function () {
         $("#spinner").show();
-        
+
         $http.post('/api/user/pickupNote?pickupNote='+$scope.model.pickupNote).then(function (response) {
             $scope.response = response.data;
             if (response.data.success) {
@@ -424,7 +424,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
     $scope.sourceHub = {},
         $scope.destinationHub = {}
     $scope.inProgress = false;
-    $scope.promoText = "";    
+    $scope.promoText = "";
     $scope.editFrom = false;
 
     function setPromoText() {
@@ -433,17 +433,17 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
             if ($scope.profile.expeditedDeliveryMessage != null) {
                 expediteText = $scope.profile.expeditedDeliveryMessage;
             }
-            var text = "<p style='color:green'>" + expediteText + "</p>";            
+            var text = "<p style='color:green'>" + expediteText + "</p>";
             text += "<p style='color:green'>As our appreciation, all your packages will be delivered expedited at standard pricing.</p>";
             $scope.promoText = $sce.trustAsHtml(text);
         }
         else if ($scope.profile.discount != null) {
-            var text = "<p style='color:green'>Thanks for being a " + $scope.profile.discount.discountType + ".</p>";  
+            var text = "<p style='color:green'>Thanks for being a " + $scope.profile.discount.discountType + ".</p>";
             text += "<p style='color:green'>You will receive a " + $scope.profile.discount.discountPercent + "% discount for all your Rynly transactions.</p>";
             $scope.promoText = $sce.trustAsHtml(text);
         }
     }
-    
+
     function isBusinessDay() {
         var day = new Date().getDay();
         if (day == 0 || day == 6) {
@@ -457,10 +457,10 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
         if ($scope.packageModel.isDropOf) {
             $("#spinner").show();
             $scope.packageModel.DeliveryMethodId = "1";
-            var obj = 
+            var obj =
                 {
                     location: $scope.packageModel.fromAddress.location,
-                    zipCode: $scope.packageModel.fromAddress.zip 
+                    zipCode: $scope.packageModel.fromAddress.zip
                 }
             $http.post('/api/hub/nearestHubList', obj).then(function (response) {
                 var hubs = response.data.data.nearestHubList;
@@ -548,7 +548,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
         var list = $scope.userAddress.filter(function (i) { return i.id == selectedAddress });
         if (list.length <= 0)
             return;
-        
+
         var address = list[0].address;
         $scope.selectedAddress = list[0];
         $scope.packageModel.toAddress = address;
@@ -625,7 +625,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
             $scope.modalInstance.close();
             $scope.inProgress = false;
         }
-        $scope.editFrom = false;        
+        $scope.editFrom = false;
         $("#pkgFrom").addClass("disabledSection");
     }
 
@@ -766,7 +766,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
               }
         }
     }
-   
+
     $scope.next = function () {
         $scope.errors = [];
 
@@ -920,7 +920,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
             if (!$scope.packageModel.deliveryMethodId)
                 $scope.errors.push("Please select service type option");
 
-            
+
             var packageItems = getPackageItems();
             if (packageItems.length <= 0) {
                 $scope.errors.push("Please provide valid Flat Shipper / Box package details");
@@ -952,7 +952,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
                 $scope.step = $scope.step + 1;
                 return;
             }
-        
+
         if ($scope.step == 3) {
             if ($scope.inProgress) { return; }
             $scope.inProgress = true;
@@ -969,7 +969,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
                     }
 
                     if (promoCodeResponse.data.success) {
-                        $scope.packageModel.promoCodeId = promoCodeResponse.data.data.id;                       
+                        $scope.packageModel.promoCodeId = promoCodeResponse.data.data.id;
                         $scope.packageModel.discount = promoCodeResponse.data.data.discount;
                         if ($scope.packageModel.promoCode.toLowerCase().trim() == "timbersfc") {
                             $scope.packageModel.promoCodeDisplayText = "";
@@ -1129,7 +1129,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
                         });
                     }
                 });
-            }     
+            }
         return packageItems;
     }
 
@@ -1211,7 +1211,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
         if ($scope.packageModel.recipient.isSignatureRequired) {
             $scope.totalSpecial = $scope.totalSpecial + $scope.signatureRequiredAmount;
         }
-        if ($scope.packageModel.discount) {           
+        if ($scope.packageModel.discount) {
             specialDiscountRate = ($scope.totalSpecial * $scope.packageModel.discount) / 100;
             $scope.discSpl = $scope.totalSpecial - specialDiscountRate;
         }
@@ -1334,7 +1334,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
 
     $scope.EditFromAddress = function (val) {
         $scope.editFrom = val;
-        if (val == true) {          
+        if (val == true) {
             $("#pkgFrom").removeClass("disabledSection");
         }
         else {
