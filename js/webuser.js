@@ -125,46 +125,46 @@ var userApp = angular.module("rynly.userweb", ['ui.bootstrap']);
 // // });
 
 // // root controller
-// angular.module("rynly.userweb").controller("RootController", function ($scope, $http) {
-//     $scope.loginModel = {};
-//     $scope.response = {};
-//     $scope.profile = null;
+angular.module("rynly.userweb").controller("RootController", function ($scope, $http) {
+    $scope.loginModel = {};
+    $scope.response = {};
+    $scope.profile = null;
 
 
-//     $scope.login = function () {
-//         $http.post('/user/home/login', $scope.loginModel).then(function (res) {
-//             $scope.response = res.data;
-//             if (res.data.success) {
-//                 window.location.href = res.data.data.user.isTnCExpired ? '/user/home/accepttnc' : '/user';
-//             }
-//         });
-//         $("#signinLink").hide();
-//     }
+    $scope.login = function () {
+        $http.post('/user/home/login', $scope.loginModel).then(function (res) {
+            $scope.response = res.data;
+            if (res.data.success) {
+                window.location.href = res.data.data.user.isTnCExpired ? '/user/home/accepttnc' : '/user';
+            }
+        });
+        $("#signinLink").hide();
+    }
 
-//     $scope.logout = function () {
-//         $http.post('/user/home/logout').then(function (response) {
-//             $scope.loginModel = {};
-//             $scope.response = {};
-//             $scope.profile = null;
-//             window.location.href = '/user';
-//         });
-//     }
+    $scope.logout = function () {
+        $http.post('/user/home/logout').then(function (response) {
+            $scope.loginModel = {};
+            $scope.response = {};
+            $scope.profile = null;
+            window.location.href = '/user';
+        });
+    }
 
 
-//     $scope.loadProfile = function () {};
-//     //     try {
-//     //         $http.post('/api/user/profile').then(function (response) {
-//     //             if (response.data.success && response.data.data) {
-//     //                 $scope.profile = response.data.data
-//     //             }
-//     //         });
-//     //     } catch (e) {
+    $scope.loadProfile = function () {};
+    //     try {
+    //         $http.post('/api/user/profile').then(function (response) {
+    //             if (response.data.success && response.data.data) {
+    //                 $scope.profile = response.data.data
+    //             }
+    //         });
+    //     } catch (e) {
 
-//     //     }
-//     // }
+    //     }
+    // }
 
-//     // $scope.loadProfile();
-// });
+    // $scope.loadProfile();
+});
 
 // // // register controller
 // // angular.module("rynly.userweb").controller("RegisterController", function ($scope, $http) {
