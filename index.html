@@ -376,14 +376,7 @@ Test <br>
 
 
 <script>
-    $(document).ready(function () {
-        var dueDate = $(".duedate");
-        for (var i = 0; i < dueDate.length; i++) {
-            var gmtDateTime = moment.utc(dueDate[i].innerHTML);
-            var local = gmtDateTime.local().format('MM/DD/YYYY');
-            dueDate[i].innerHTML = local;
-        }
-    });
+
 </script>  </div>
                         </div>
                         <br>
