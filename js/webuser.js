@@ -515,26 +515,26 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
         $scope.deliverybyLabelText = '2-3 BUSINESS DAYS';
         $scope.deliveryDateMessage = 'ESTIMATED DELIVERY DATE';
 
-        if ($scope.packageModel.isExpedited || $scope.profile.expeditedDelivery) {
-            $http.get('/api/settings/TimeZoneDateTime').then(function (response) {
-                if (response.data.success && response.data.data) {
-                    var dateTime = new Date(response.data.data.dateTime);
-                    $scope.deliveryDateMessage = "GUARANTEED EXPEDITED DELIVERY DATE";
-                    var hours = dateTime.getHours();
-                    var sourceCity = $scope.sourceHub.address.city;
-                    var destinationCity = $scope.destinationHub.address.city;
-                    $scope.deliverybyLabelText = 'GUARANTEED SAME DAY'
-                    if (!isBusinessDay()) {
-                        $scope.deliverybyLabelText = 'GUARANTEED NEXT BUSINESS DAY'
-                    }
-                    else if (sourceCity.toLowerCase() != destinationCity.toLowerCase() ||
-                        hours >= 11) {
-                        $scope.deliverybyLabelText = 'GUARANTEED NEXT BUSINESS DAY';
-                    }
-                }
-            });
-        }
-    }
+    //     if ($scope.packageModel.isExpedited || $scope.profile.expeditedDelivery) {
+    //         $http.get('/api/settings/TimeZoneDateTime').then(function (response) {
+    //             if (response.data.success && response.data.data) {
+    //                 var dateTime = new Date(response.data.data.dateTime);
+    //                 $scope.deliveryDateMessage = "GUARANTEED EXPEDITED DELIVERY DATE";
+    //                 var hours = dateTime.getHours();
+    //                 var sourceCity = $scope.sourceHub.address.city;
+    //                 var destinationCity = $scope.destinationHub.address.city;
+    //                 $scope.deliverybyLabelText = 'GUARANTEED SAME DAY'
+    //                 if (!isBusinessDay()) {
+    //                     $scope.deliverybyLabelText = 'GUARANTEED NEXT BUSINESS DAY'
+    //                 }
+    //                 else if (sourceCity.toLowerCase() != destinationCity.toLowerCase() ||
+    //                     hours >= 11) {
+    //                     $scope.deliverybyLabelText = 'GUARANTEED NEXT BUSINESS DAY';
+    //                 }
+    //             }
+    //         });
+    //     }
+    // }
 
     $scope.getAddressList = function () {
         $http.get('/api/user/addresslist', null).then(function (response) {
