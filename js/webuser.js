@@ -534,7 +534,7 @@ angular.module("rynly.userweb").controller("PackageController", function ($scope
     //             }
     //         });
     //     }
-    // }
+    }
 
     $scope.getAddressList = function () {
         $http.get('/api/user/addresslist', null).then(function (response) {
