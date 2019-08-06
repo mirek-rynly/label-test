@@ -382,7 +382,12 @@ Test <br>
                         <br>
                         <div class="form-row">
                             <div class="col form-group float-right">
-                                <button type="button" style="border-radius: 10px !important;" name="button" class="button-primary-site-next" ng-click="printLabel()">PRINT</button>
+                            <script>
+                                var printLabel = function () {
+                                window.print();
+                                };
+                             </script>
+                                <button type="button" style="border-radius: 10px !important;" name="button" class="button-primary-site-next" onclick="printLabel()">PRINT</button>
                                 <button type="button" style="border-radius: 10px !important; margin-right:10px;" name="button" class="button-primary-site" ng-click="previous()">PREVIOUS</button>
                             </div>
                         </div>
